@@ -8,13 +8,25 @@
       "featureType": "Application site",
       "formats": ["GeoJSON", "Shapefile", "CSV"],
       "temporalExtent": "2010 – 2023",
-      "version": "v2.1 (2024-03)",
       "datasetUrl": "https://example.com/dataset",
       "metadataUrl": "https://example.com/metadata",
-      "license": "CC BY 4.0",
       "accessNote": "Registration required."
     }
   ],
   "TX": [ ], 
-  "NY": [ ]
+  "NY": [ ],
+  "MN": [
+    {
+      "name": "Minnesota Land Application Sites",
+      "provider": "Minnesota Pollution Control Agency",
+      "description": "Locations of regulated land application sites associated with the municipal and industrial wastewater, feedlot, petroleum remediation, and other agency programs",
+      "dataType": "Vector (point)",
+      "featureType": "Application site",
+      "formats": ["Shapefile", "CSV", "Esri Geodatabase", "OGC GeoPackage"],
+      "temporalExtent": "1997 - Present",
+      "datasetUrl": "https://gisdata.mn.gov/dataset/env-land-application-sites",
+      "metadataUrl": "https://resources.gisdata.mn.gov/pub/gdrs/data/pub/us_mn_state_pca/env_land_application_sites/metadata/metadata.html",
+      "accessNote": "File download."
+    }
+  ]
 }
