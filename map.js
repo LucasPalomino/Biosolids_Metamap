@@ -4,17 +4,12 @@
  * Loads US state boundaries (GeoJSON) and a datasets.json file,
  * colors states with available data, and populates a sidebar
  * panel when the user clicks a state.
- *
- * Expected datasets.json shape — see datasets.json for full example:
- * {
- *   "CA": [ { ...datasetObject }, ... ],
- *   "TX": [ { ...datasetObject } ]
- * }
+ * 
  *
  * Each dataset object fields:
  *   name, provider, description, dataType, featureType,
- *   formats (array), temporalExtent, version,
- *   datasetUrl, metadataUrl, license, accessNote
+ *   formats (array), temporalExtent,
+ *   datasetUrl, metadataUrl, accessNote
  */
 
 (function () {
@@ -190,8 +185,6 @@
         ${ds.dataType    ? `<div class="field"><div class="field-label">Data type</div><div class="field-value">${esc(ds.dataType)}</div></div>` : ""}
         ${ds.featureType ? `<div class="field"><div class="field-label">Feature type</div><div class="field-value">${esc(ds.featureType)}</div></div>` : ""}
         ${ds.temporalExtent ? `<div class="field"><div class="field-label">Temporal extent</div><div class="field-value">${esc(ds.temporalExtent)}</div></div>` : ""}
-        ${ds.version     ? `<div class="field"><div class="field-label">Version</div><div class="field-value">${esc(ds.version)}</div></div>` : ""}
-        ${ds.license     ? `<div class="field"><div class="field-label">License</div><div class="field-value">${esc(ds.license)}</div></div>` : ""}
         ${formatTags     ? `<div class="field full"><div class="field-label">Formats</div><div class="field-value">${formatTags}</div></div>` : ""}
       </div>
 
