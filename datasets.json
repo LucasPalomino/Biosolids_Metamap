@@ -1,0 +1,20 @@
+{
+  "CA": [
+    {
+      "name": "California Biosolids Land Application Sites",
+      "provider": "California State Water Resources Control Board",
+      "description": "Short description of the dataset.",
+      "dataType": "Vector (polygon)",
+      "featureType": "Application site",
+      "formats": ["GeoJSON", "Shapefile", "CSV"],
+      "temporalExtent": "2010 – 2023",
+      "version": "v2.1 (2024-03)",
+      "datasetUrl": "https://example.com/dataset",
+      "metadataUrl": "https://example.com/metadata",
+      "license": "CC BY 4.0",
+      "accessNote": "Registration required."
+    }
+  ],
+  "TX": [ ], 
+  "NY": [ ]
+}
