@@ -7,7 +7,7 @@
  * 
  *
  * Each dataset object fields:
- *   name, provider, description, dataType, featureType,
+ *   name, provider, description, geomType, featureType,
  *   formats (array), temporalExtent,
  *   datasetUrl, metadataUrl, accessNote
  */
@@ -182,7 +182,7 @@
 
       <!-- Metadata fields -->
       <div class="field-grid">
-        ${ds.dataType    ? `<div class="field"><div class="field-label">Data type</div><div class="field-value">${esc(ds.dataType)}</div></div>` : ""}
+        ${ds.geomType    ? `<div class="field"><div class="field-label">Geometry type</div><div class="field-value">${esc(ds.geomType)}</div></div>` : ""}
         ${ds.featureType ? `<div class="field"><div class="field-label">Feature type</div><div class="field-value">${esc(ds.featureType)}</div></div>` : ""}
         ${ds.temporalExtent ? `<div class="field"><div class="field-label">Temporal extent</div><div class="field-value">${esc(ds.temporalExtent)}</div></div>` : ""}
         ${formatTags     ? `<div class="field full"><div class="field-label">Formats</div><div class="field-value">${formatTags}</div></div>` : ""}
