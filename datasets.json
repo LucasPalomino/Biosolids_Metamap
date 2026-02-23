@@ -1,32 +1,305 @@
 {
-  "CA": [
-    {
-      "name": "California Biosolids Land Application Sites",
-      "provider": "California State Water Resources Control Board",
-      "description": "Short description of the dataset.",
-      "dataType": "Vector (polygon)",
-      "featureType": "Application site",
-      "formats": ["GeoJSON", "Shapefile", "CSV"],
-      "temporalExtent": "2010 – 2023",
-      "datasetUrl": "https://example.com/dataset",
-      "metadataUrl": "https://example.com/metadata",
-      "accessNote": "Registration required."
-    }
-  ],
-  "TX": [ ], 
-  "NY": [ ],
   "MN": [
     {
       "name": "Minnesota Land Application Sites",
       "provider": "Minnesota Pollution Control Agency",
       "description": "Locations of regulated land application sites associated with the municipal and industrial wastewater, feedlot, petroleum remediation, and other agency programs",
-      "dataType": "Vector (point)",
+      "geomType": "Point",
       "featureType": "Application site",
-      "formats": ["Shapefile", "CSV", "Esri Geodatabase", "OGC GeoPackage"],
+      "formats": [
+        "Shapefile",
+        "CSV",
+        "Esri Geodatabase",
+        "OGC GeoPackage"
+      ],
       "temporalExtent": "1997 - Present",
       "datasetUrl": "https://gisdata.mn.gov/dataset/env-land-application-sites",
       "metadataUrl": "https://resources.gisdata.mn.gov/pub/gdrs/data/pub/us_mn_state_pca/env_land_application_sites/metadata/metadata.html",
-      "accessNote": "File download."
+      "accessNote": "File download"
+    },
+    {
+      "name": "Biosolids Application Sites Map",
+      "provider": "City of Moorhead",
+      "description": "Map of city, leased. and private biosolids application site parcels and PLSS for reference",
+      "geomType": "Polygons",
+      "featureType": "Pemit",
+      "formats": [
+        "JSON"
+      ],
+      "temporalExtent": "-",
+      "datasetUrl": "https://services.arcgis.com/t2tplTEKxuL7eSvF/arcgis/rest/services/Biosolids_Publish/FeatureServer",
+      "metadataUrl": "https://services.arcgis.com/t2tplTEKxuL7eSvF/arcgis/rest/services/Biosolids_Publish/FeatureServer",
+      "accessNote": "ArcGIS Feature Service (Rest API)"
+    }
+  ],
+  "WI": [
+    {
+      "name": "City of Marinette Biosolids Map",
+      "provider": "City of Marinette",
+      "description": "Approximate locations of DNR approved landspreading fields from 1996-2017 based on the legal description entered in the DNR\u2019s Waste Water database (SWAMP)",
+      "geomType": "Point, Polygon",
+      "featureType": "Permit, Application site",
+      "formats": [],
+      "temporalExtent": "1996 - 2018",
+      "datasetUrl": "https://www.marinette.wi.us/421/Biosolids-Map",
+      "metadataUrl": "-",
+      "accessNote": "No public download, requires outreach"
+    },
+    {
+      "name": "Biosolids Spreading in Oneida County",
+      "provider": "WXPR Public Radio",
+      "description": "Historic data on sludge-spreading in Oneida County from the WI DNR",
+      "geomType": "Point",
+      "featureType": "Application site",
+      "formats": [
+        "XLSX"
+      ],
+      "temporalExtent": "1996 - 2024",
+      "datasetUrl": "https://www.wxpr.org/energy-environment/2024-01-22/biosolids-in-oneida-county-what-we-know-and-what-were-still-learning",
+      "metadataUrl": "-",
+      "accessNote": "Excel sheet linked in article"
+    }
+  ],
+  "OH": [
+    {
+      "name": "Ohio Biosolids Application Sites",
+      "provider": "Ohio Environmental Protection Agency",
+      "description": "Authorized beneficial use sites for Class B Biosolids (non-industrial wastewater treatment plants). Authorization does not mean biosolids have ever been applied to the field",
+      "geomType": "Polygon",
+      "featureType": "Pemit",
+      "formats": [
+        "Shapefile",
+        "GeoJSON",
+        "CSV",
+        "Esri Geodatabase",
+        "KML"
+      ],
+      "temporalExtent": "2017 - Present* (assumed)",
+      "datasetUrl": "https://data-oepa.opendata.arcgis.com/datasets/6a9c5c09abf642c8b8cb35c9387338cb_0/explore?location=40.031259%2C-82.813462%2C13",
+      "metadataUrl": "https://data-oepa.opendata.arcgis.com/datasets/oepa::biosolids-application-fields/about",
+      "accessNote": "ArcGIS portal download"
+    }
+  ],
+  "VA": [
+    {
+      "name": "Virginia Biosolids Areas",
+      "provider": "Virginina Department of Environmental Quality",
+      "description": "Boundary of permitted sites that includes one or more land application fields, and may include setback areas or other areas not authorized for land application of biosolids and/or other residuals.",
+      "geomType": "Polygons",
+      "featureType": "Permit",
+      "formats": [
+        "Shapefile",
+        "GeoJSON",
+        "CSV",
+        "KML"
+      ],
+      "temporalExtent": "2020 - Present* (assumed)",
+      "datasetUrl": "https://geohub-vadeq.hub.arcgis.com/datasets/81255b5bad1c49ab9754d63e80bb03be_207/explore?location=37.991600%2C-79.407550%2C7",
+      "metadataUrl": "https://geohub-vadeq.hub.arcgis.com/datasets/81255b5bad1c49ab9754d63e80bb03be_207/about",
+      "accessNote": "ArcGIS portal download"
+    }
+  ],
+  "MD": [
+    {
+      "name": "Land Application Permits for Biosolids In Maryland from 2022",
+      "provider": "Potomac Riverkeeper Network",
+      "description": "Active land application permits where biosolids are spread typically on farm land. Original data come from Maryland Department of the Environment permit pdf documents",
+      "geomType": "Point",
+      "featureType": "Permit",
+      "formats": [
+        "JSON"
+      ],
+      "temporalExtent": "2020 - Present",
+      "datasetUrl": "https://www.arcgis.com/home/item.html?id=8c9241f5fe23479f96be5ec51d26d011",
+      "metadataUrl": "https://www.arcgis.com/home/item.html?id=dbda7e4c56464ae08f2fad8b64d99e3b",
+      "accessNote": "ArcGIS Feature Service (Rest API)"
+    }
+  ],
+  "FL": [
+    {
+      "name": "Florida Biosolid Sites",
+      "provider": "Florida Department of Environmental Protection",
+      "description": "Wastewater facility regulation (WAFR) residual application sites",
+      "geomType": "Point",
+      "featureType": "Application site",
+      "formats": [
+        "Shapefile",
+        "GeoJSON",
+        "CSV",
+        "Esri Geodatabase",
+        "KML"
+      ],
+      "temporalExtent": "2006 - 2018* (assumed)",
+      "datasetUrl": "https://hub.arcgis.com/datasets/FDEP::wastewater-facility-regulation-wafr-residual-application-sites/explore",
+      "metadataUrl": "https://hub.arcgis.com/datasets/FDEP::wastewater-facility-regulation-wafr-residual-application-sites/about",
+      "accessNote": "ArcGIS Feature Service (Rest API)"
+    }
+  ],
+  "ME": [
+    {
+      "name": "Maine DEP PFAS Investigation",
+      "provider": "Maine Department of Environmental Protection",
+      "description": "Locations of past sludge utilization sites (now banned) and associated PFAS results from water samples, among other layers",
+      "geomType": "Point, Polygon",
+      "featureType": "Application site",
+      "formats": [
+        "GeoJSON",
+        "JSON",
+        "CSV"
+      ],
+      "temporalExtent": "-",
+      "datasetUrl": "https://experience.arcgis.com/experience/462392f57317486eb1c8d7eb6d0fea3d?id=468a9f7ddcd54309bc1ae8ba173965c7",
+      "metadataUrl": "-",
+      "accessNote": "ArcGIS experience download"
+    }
+  ],
+  "NC": [
+    {
+      "name": "DWR Non Discharge Land Application Field Permits",
+      "provider": "North Carolina Department of Environmental Quality",
+      "description": "Non-Discharge Land Application Fields permits managed by the Division of Water Resources within NC DEQ",
+      "geomType": "Point",
+      "featureType": "Permit",
+      "formats": [
+        "Shapefile",
+        "GeoJSON",
+        "CSV",
+        "Esri Geodatabase",
+        "OGC GeoPackage",
+        "KML",
+        "XLSX",
+        "SQLite Geodatabase"
+      ],
+      "temporalExtent": "2019 - 2025* (assumed)",
+      "datasetUrl": "https://data-ncdenr.opendata.arcgis.com/datasets/4e16c0959f234a0eaf79ee4c3282fe8b_0/explore?location=35.665087%2C-79.406605%2C11",
+      "metadataUrl": "https://data-ncdenr.opendata.arcgis.com/datasets/ncdenr::dwr-non-discharge-land-application-field-permits/about",
+      "accessNote": "ArcGIS portal download"
+    }
+  ],
+  "GA": [
+    {
+      "name": "Georgia Compost Biosolids Management WFL1 ",
+      "provider": "Georgia Environmental Protection Division",
+      "description": "A map of all active GA compost locations and wastewater treatment facilities that are required to report biosolids production. Also includes spreading locations.",
+      "geomType": "Point",
+      "featureType": "Application site",
+      "formats": [
+        "GeoJSON",
+        "JSON",
+        "PBF"
+      ],
+      "temporalExtent": "-",
+      "datasetUrl": "https://services2.arcgis.com/PYn6bWCjT6bhw1z3/arcgis/rest/services/Georgia_Compost___Biosolids_Management_WFL1/FeatureServer",
+      "metadataUrl": "-",
+      "accessNote": "ArcGIS Feature Service (Rest API)"
+    }
+  ],
+  "PA": [
+    {
+      "name": "Biosolids Program - Beneficial Land Use Parcels",
+      "provider": "Pennsylvania Department of Environmental Protection",
+      "description": "Active and inactive land application for biosolids and septage",
+      "geomType": "Point",
+      "featureType": "Permit",
+      "formats": [
+        "Shapefile",
+        "GeoJSON",
+        "CSV",
+        "KML"
+      ],
+      "temporalExtent": "2016 - 2026* (assumed)",
+      "datasetUrl": "https://newdata-padep-1.opendata.arcgis.com/datasets/PADEP-1::biosolids-program-beneficial-land-use-parcels/explore",
+      "metadataUrl": "https://newdata-padep-1.opendata.arcgis.com/datasets/PADEP-1::biosolids-program-beneficial-land-use-parcels/about",
+      "accessNote": "ArcGIS portal download"
+    }
+  ],
+  "CA": [
+    {
+      "name": "Drinking Water Tool",
+      "provider": "Community Water Center",
+      "description": "Interactive water and reference data layers in California. Biosolids applied to lands presented as parcels",
+      "geomType": "Polygon",
+      "featureType": "Permit",
+      "formats": [
+        "Shapefile"
+      ],
+      "temporalExtent": "1995-2024",
+      "datasetUrl": "https://www.communitywatercenter.org/drinkingwatertool/data",
+      "metadataUrl": "https://drinkingwatertool.communitywatercenter.org/wp-content/uploads/2025/03/biosolids_application_metadata_121724.pdf",
+      "accessNote": "Website download"
+    }
+  ],
+  "IA": [
+    {
+      "name": "Iowa Biosolids Land Application Site Tracking",
+      "provider": "Iowa Department of Natural Resources",
+      "description": "Biosolids land application site information for major wastewater treatment facilities (flow rate of 1 million gallons per day or greater and treatment works that serve 10,000 people or more.)",
+      "geomType": "Point",
+      "featureType": "Application site",
+      "formats": [],
+      "temporalExtent": "2018-2024",
+      "datasetUrl": "https://programs.iowadnr.gov/BioSolid/Home/Year2018",
+      "metadataUrl": "https://programs.iowadnr.gov/BioSolid/Home/About",
+      "accessNote": "No public download, requires outreach"
+    }
+  ],
+  "IN": [
+    {
+      "name": "IDEM Land Application",
+      "provider": "Indiana Department of Environmental Management",
+      "description": "Properties where regulated land application activities have been conducted.",
+      "geomType": "Polygon",
+      "featureType": "Application site",
+      "formats": [
+        "Shapefile",
+        "GeoJSON",
+        "CSV",
+        "Esri Geodatabase",
+        "KML"
+      ],
+      "temporalExtent": "2022 - 2024* (assumed)",
+      "datasetUrl": "https://www.indianamap.org/maps/c68ac467b93c4586bbd272c2938bae67/about",
+      "metadataUrl": "https://www.indianamap.org/maps/c68ac467b93c4586bbd272c2938bae67/about",
+      "accessNote": "Public download"
+    }
+  ],
+  "NY": [
+    {
+      "name": "Biosolids Storage & Processing - Solid Waste Management Facilities Map",
+      "provider": "Office of Information Technology Services NY",
+      "description": "Active solid waste management facilities and biosolid application sites/permits",
+      "geomType": "Point",
+      "featureType": "Permit",
+      "formats": [
+        "Shapefile",
+        "GeoJSON",
+        "CSV",
+        "KML",
+        "XLSX",
+        "API endpoint"
+      ],
+      "temporalExtent": "2014-2025",
+      "datasetUrl": "https://data.ny.gov/Energy-Environment/Biosolids-Storage-Processing-Solid-Waste-Managemen/q4g7-jbni",
+      "metadataUrl": "-",
+      "accessNote": "Public download"
+    }
+  ],
+  "DE": [
+    {
+      "name": "DNREC Permits",
+      "provider": "Delaware Department of Natural Resources and Environmental Control",
+      "description": "DNREC permitted active and inactive approved land application sites where non-hazardous waste residuals have been applied.",
+      "geomType": "Polygons",
+      "featureType": "Permit",
+      "formats": [
+        "GeoJSON",
+        "JSON",
+        "PBF"
+      ],
+      "temporalExtent": "-",
+      "datasetUrl": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Environmental/DE_DNREC_Permits/FeatureServer/3",
+      "metadataUrl": "https://www.arcgis.com/home/item.html?id=e9729e78964f4fc0a49a6755f03f980b&sublayer=3",
+      "accessNote": "ArcGIS Feature Service (Rest API)"
     }
   ]
 }
