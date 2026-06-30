@@ -263,27 +263,6 @@
       "accessNote": "Public download"
     }
   ],
-  "NY": [
-    {
-      "name": "Biosolids Storage & Processing - Solid Waste Management Facilities Map",
-      "provider": "Office of Information Technology Services NY",
-      "description": "Active solid waste management facilities and biosolid application sites/permits",
-      "geomType": "Point",
-      "featureType": "Permit",
-      "formats": [
-        "Shapefile",
-        "GeoJSON",
-        "CSV",
-        "KML",
-        "XLSX",
-        "API endpoint"
-      ],
-      "temporalExtent": "2014-2025",
-      "datasetUrl": "https://data.ny.gov/Energy-Environment/Biosolids-Storage-Processing-Solid-Waste-Managemen/q4g7-jbni",
-      "metadataUrl": "-",
-      "accessNote": "Public download"
-    }
-  ],
   "DE": [
     {
       "name": "DNREC Permits",
